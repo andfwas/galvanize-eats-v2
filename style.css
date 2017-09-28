@@ -1,0 +1,128 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+header {
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+main {
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('restaurant-hero-image.jpg');
+  background-size: cover;
+  opacity: 0.7;
+}
+h1 {
+  color: white;
+}
+h2,
+h5 {
+  margin: 0;
+}
+h4 {
+  margin: 0 0 0 20px;
+}
+p {
+  font-size: 12px;
+}
+features,
+feature {
+  display: flex;
+  flex-flow: row;
+  align-items: baseline;
+}
+button {
+  border-radius: 0;
+  width: 350px;;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: white;
+  margin: 60px 0 30px 0;
+}
+button:hover {
+  transition: background-color 0.5s ease;
+  background-color: #66FF77;
+}
+column {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  margin: 3%;
+}
+i {
+  margin: 10px;
+}
+form {
+  display: flex;
+  flex-flow: column;
+}
+input {
+  padding: 5px;
+}
+.column-left {
+  width: 400px;
+  margin: 10px;
+}
+.column-right {
+  width: 200px;
+  margin: 10px;
+  border: 1px solid lightgrey;
+}
+menu {
+  border: 1px solid lightgrey;
+  padding: 0;
+}
+.menu {
+  margin: 0 0 0 5px;
+}
+#menu {
+  margin: 0;
+}
+order {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+.quantity {
+  display: flex;
+  flex-flow: row;
+}
+#quantity {
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+}
+#addItem {
+  width: 160px;
+  margin: 0 0 0 10px;
+  border: 1px solid lightgrey;
+}
+#addItem:hover {
+  background-color: red;
+}
+#addItem:active {
+  transition: background-color 0s;
+  background-color: yellow;
+}
+.addItem {
+  display: flex;
+  align-items: flex-end;
+}
+#deliver {
+  border: 1px solid lightgrey;
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+#deliver:active {
+  transition: background-color 0s;
+  background-color: yellow;
+}
+footer {
+  text-align: center;
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
