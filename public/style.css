@@ -22,9 +22,6 @@ h2,
 h5 {
   margin: 0;
 }
-h4 {
-  margin: 0 0 0 20px;
-}
 p {
   font-size: 12px;
 }
@@ -71,6 +68,9 @@ input {
   width: 200px;
   margin: 10px;
   border: 1px solid lightgrey;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 menu {
   border: 1px solid lightgrey;
@@ -120,6 +120,37 @@ order {
 #deliver:active {
   transition: background-color 0s;
   background-color: yellow;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px 2px 15px;
+  padding: 0 5px 0 5px;
+  border-radius: 5px;
+}
+.item:hover {
+  color: white;
+  background-color: #5566FF;
+  cursor: pointer;
+}
+.item:active {
+  transition: background-color 0.1s ease;
+  background-color: yellow;
+  color: blue;
+}
+.inactive {
+  transition: background-color 0.5s ease;
+}
+.active {
+  transition: background-color 0.25s ease;
+  background-color: #66FF77;
+}
+.active:hover {
+  color: #66FF77;
+}
+orders,
+totals {
+  border: 1px solid black;
 }
 footer {
   text-align: center;
