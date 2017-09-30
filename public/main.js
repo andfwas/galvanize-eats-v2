@@ -65,3 +65,9 @@ function makeMenu(x) {
     }
   }
 }
+
+function makeList(arr) {
+
+}
+
+makeList(list)
