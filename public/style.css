@@ -15,6 +15,13 @@ main {
   background-size: cover;
   opacity: 0.7;
 }
+input,
+button,
+div,
+.inactive,
+.active {
+  border-radius: 5px;
+}
 h1 {
   color: white;
 }
@@ -25,14 +32,7 @@ h5 {
 p {
   font-size: 12px;
 }
-features,
-feature {
-  display: flex;
-  flex-flow: row;
-  align-items: baseline;
-}
 button {
-  border-radius: 0;
   width: 350px;;
   padding: 10px;
   font-size: 20px;
@@ -81,11 +81,22 @@ menu {
 }
 #menu {
   margin: 0;
+  border-radius: 5px;
+}
+orders,
+totals {
+  border: 1px solid black;
 }
 order {
   display: flex;
   flex-flow: row;
   justify-content: center;
+}
+features,
+feature {
+  display: flex;
+  flex-flow: row;
+  align-items: baseline;
 }
 .quantity {
   display: flex;
@@ -147,10 +158,6 @@ order {
 }
 .active:hover {
   color: #66FF77;
-}
-orders,
-totals {
-  border: 1px solid black;
 }
 footer {
   text-align: center;
