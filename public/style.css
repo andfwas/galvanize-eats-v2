@@ -26,6 +26,7 @@ h1 {
   color: white;
 }
 h2,
+h3,
 h5 {
   margin: 0;
 }
@@ -65,12 +66,12 @@ input {
   margin: 10px;
 }
 .column-right {
-  width: 200px;
+  width: 250px;
   margin: 10px;
   border: 1px solid lightgrey;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+
 }
 menu {
   border: 1px solid lightgrey;
@@ -82,10 +83,6 @@ menu {
 #menu {
   margin: 0;
   border-radius: 5px;
-}
-orders,
-totals {
-  border: 1px solid black;
 }
 order {
   display: flex;
@@ -158,6 +155,30 @@ feature {
 }
 .active:hover {
   color: #66FF77;
+}
+#orders {
+  margin-left: 5px;
+}
+.basket {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+items,
+totals {
+  margin: 0 5px 0 5px;
+}
+subtotal,
+tax,
+total {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.addToList {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
 }
 footer {
   text-align: center;
