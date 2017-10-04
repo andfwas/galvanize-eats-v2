@@ -1,3 +1,5 @@
+
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -71,7 +73,6 @@ input {
   border: 1px solid lightgrey;
   display: flex;
   flex-flow: column;
-
 }
 menu {
   border: 1px solid lightgrey;
@@ -123,7 +124,10 @@ feature {
 #deliver {
   border: 1px solid lightgrey;
   width: 100%;
-  margin: 10px 0 0 0;
+  margin: 50px 0 0 0;
+}
+.quantity {
+  margin-top: 50px;
 }
 #deliver:active {
   transition: background-color 0s;
@@ -163,6 +167,10 @@ feature {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+}
+items {
+  overflow: scroll;
+  height: 400px;
 }
 items,
 totals {

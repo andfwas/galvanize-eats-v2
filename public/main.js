@@ -5,10 +5,15 @@ var foods = {}
 var burgers = document.getElementById('burgers')
 var pizza = document.getElementById('pizza')
 var items = document.getElementsByClassName('item')
-
 var list = []
 var addItem = document.getElementsByClassName('addItem')
-
+var subtotal = document.getElementById('subtotal')
+var tax = document.getElementById('tax')
+var total = document.getElementById('total')
+var addToList = document.getElementById('addToList')
+var basket = document.getElementsByClassName('basket')
+var itemList = document.getElementById('addToList')
+var quantity = document.getElementById('quantity')
 
 fetch(menuItems)
 .then(function(result) {
@@ -16,7 +21,6 @@ fetch(menuItems)
 })
 .then(function(food) {
   foods = food.menu
-  console.log(foods)
   makeMenu(foods)
 })
 
@@ -60,31 +64,46 @@ function selectItem(x) {
   })
 }
 
-var itemList = document.getElementById('addToList')
 
 function populateOrder() {
   addItem[0].addEventListener('click', function() {
     for (var i = 0; i < items.length; i++) {
-      var basketItem = document.createElement('div')
-      basketItem.setAttribute('class', 'basket')
-      var basketItemName = document.createElement('div')
-      var basketItemPrice = document.createElement('div')
-      if (items[i].className == 'item active') {
-        var name = items[i].childNodes[0].innerText
-        var price = items[i].childNodes[1].innerText
-        var ordered = document.getElementById('addToList')
-        basketItemName.innerText = name
-        basketItemPrice.innerText = price
-        basketItem.append(basketItemName)
-        basketItem.append(basketItemPrice)
-        itemList.append(basketItem)
-        // ordered.appendChild(name)
-        // ordered.appendChild(price)
-        console.log(name);
-        console.log(price);
-        console.log(ordered);
+      for (var j = 0; j < quantity.value; j++) {
+
+        var basketItem = document.createElement('div')
+        basketItem.setAttribute('class', 'basket')
+        var basketItemName = document.createElement('div')
+        var basketItemPrice = document.createElement('div')
+        if (items[i].className == 'item active') {
+          var name = items[i].childNodes[0].innerText
+          var price = items[i].childNodes[1].innerText
+          var ordered = document.getElementById('addToList')
+          basketItemName.innerText = name
+          basketItemPrice.innerText = price
+          basketItem.append(basketItemName)
+          basketItem.append(basketItemPrice)
+          itemList.append(basketItem)
+          totals(price)
+        }
       }
     }
   })
 }
 populateOrder()
+
+function totals(x) {
+  var sub = 0
+  var taxy = 0
+  var tots = 0
+  for (var i =  0; i < basket.length; i++) {
+    var add = basket[i].childNodes[1].innerText
+    sub += Number(add)
+    sub = Math.round((sub * 100)) / 100
+    taxy = Number(sub * 0.082)
+    taxy = Math.round(taxy * 100) / 100
+    tots = sub + taxy
+    subtotal.children[1].innerText = sub
+    tax.children[1].innerText = taxy
+    total.children[1].innerText = tots
+  }
+}

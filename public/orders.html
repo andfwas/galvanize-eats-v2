@@ -24,13 +24,13 @@
         <form class="quantity" action="orders.html" method="post">
           <div class="">
             <h5>Quantity</h5>
-            <input id="quantity" type="number" name="" value="1">
+            <input id="quantity" type="number" name="" value="1" min="1" max="99">
           </div>
           <div class="addItem">
             <button id="addItem" type="button" name="Add Item">Add Item</button>
           </div>
         </form>
-        <form class="" action="orders.html" method="post">
+        <form action="orders.html" method="post">
           <h5>Name</h5>
           <input type="text" name="" placeholder="John Doe">
           <h5>Phone Number</h5>
@@ -48,17 +48,17 @@
 
         </items>
         <totals>
-          <subtotal>
+          <subtotal id='subtotal'>
             <h3>Subtotal</h3>
-            <h3>$0.00</h3>
+            <h3>0.00</h3>
           </subtotal>
-          <tax>
+          <tax id='tax'>
             <h3>Tax</h3>
-            <h3>$0.00</h3>
+            <h3>0.00</h3>
           </tax>
-          <total>
+          <total id='total'>
             <h2>Total</h2>
-            <h3>$0.00</h3>
+            <h3>0.00</h3>
           </total>
         </totals>
       </div>
