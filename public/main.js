@@ -14,6 +14,8 @@ var addToList = document.getElementById('addToList')
 var basket = document.getElementsByClassName('basket')
 var itemList = document.getElementById('addToList')
 var quantity = document.getElementById('quantity')
+var quantities = document.getElementsByClassName('quantity')
+
 
 fetch(menuItems)
 .then(function(result) {
@@ -64,8 +66,6 @@ function selectItem(x) {
   })
 }
 
-
-
 function populateOrder() {
   addItem[0].addEventListener('click', function() {
     for (var i = 0; i < items.length; i++) {
@@ -90,7 +90,9 @@ function populateOrder() {
     }
   })
 }
-populateOrder()
+
+
+
 
 function totals(x) {
   var sub = 0
@@ -108,3 +110,5 @@ function totals(x) {
     total.children[1].innerText = tots
   }
 }
+
+populateOrder()
