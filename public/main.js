@@ -65,6 +65,7 @@ function selectItem(x) {
 }
 
 
+
 function populateOrder() {
   addItem[0].addEventListener('click', function() {
     for (var i = 0; i < items.length; i++) {
@@ -101,7 +102,7 @@ function totals(x) {
     sub = Math.round((sub * 100)) / 100
     taxy = Number(sub * 0.082)
     taxy = Math.round(taxy * 100) / 100
-    tots = sub + taxy
+    tots = Math.round((sub + taxy) * 100) / 100
     subtotal.children[1].innerText = sub
     tax.children[1].innerText = taxy
     total.children[1].innerText = tots
