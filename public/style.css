@@ -188,8 +188,12 @@ total {
   flex-flow: column;
   justify-content: flex-start;
 }
+header {
+  border-radius: 5px 5px 0 0;
+}
 footer {
   text-align: center;
   border: 1px solid lightgrey;
+  border-radius: 0 0 5px 5px;
   padding: 10px;
 }
