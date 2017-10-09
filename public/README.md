@@ -1,2 +1,2 @@
 # Galvanize Eats
-https://galvanize-eats-a0d6b.firebaseapp.com
+https://galvanize-eats-v2.firebaseapp.com
