@@ -91,9 +91,6 @@ function populateOrder() {
   })
 }
 
-
-
-
 function totals(x) {
   var sub = 0
   var taxy = 0
